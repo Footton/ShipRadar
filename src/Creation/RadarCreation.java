@@ -13,7 +13,7 @@ public class RadarCreation extends JavaPlugin {
 	
 	public void onEnable(){
 		// Register PlayerListener
-		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+		getPluginLoader().registerEvents(new PlayerListener(), this);
 		
 		HashSet<NewRadar> currentRadars = new HashSet<NewRadar>();
 		
