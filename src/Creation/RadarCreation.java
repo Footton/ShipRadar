@@ -3,13 +3,13 @@ package Creation;
 import java.io.File;
 import java.util.HashSet;
 
-import org.spongepowered.asm.util.VersionNumber;
+import org.bukkit.plugin.java.JavaPlugin;
 
 
 
 
 
-public class RadarCreation {
+public class RadarCreation extends JavaPlugin {
 	
 	public void onEnable(){
 		// Register PlayerListener
