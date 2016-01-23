@@ -13,18 +13,20 @@ public class RadarCreation extends JavaPlugin {
 	
 	public void onEnable(){
 		// Register PlayerListener
+		//registerEvents is giving me error
 		getPluginLoader().registerEvents(new PlayerListener(), this);
 		
 		HashSet<NewRadar> currentRadars = new HashSet<NewRadar>();
 		
 		Commands executor = new Commands();
+		//setExecutor is giving me error
 		this.getCommand("shipradar").setExecutor(executor);
 		
 
 	}
 	
 
-
+// error on saveDefaultConfig
 	private void saveDefaultConfig() {
 		// TODO Auto-generated method stub
 		
@@ -54,6 +56,7 @@ public class RadarCreation extends JavaPlugin {
 
 
 	public void onDisable(){
+		//error on both currentRadars and destroy
 		Object currentRadars;
 		for(NewRadar radar : currentRadars){
 			radar.destroy();
@@ -61,6 +64,7 @@ public class RadarCreation extends JavaPlugin {
 	}
 
 	@Override
+	//error on run
 	public void run() {
 		// TODO Auto-generated method stub
 		
